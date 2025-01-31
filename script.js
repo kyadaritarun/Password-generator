@@ -16,7 +16,7 @@ document.getElementById("length").addEventListener("input", updateLength);      
 
         //Function to generate a random password
     function generatePassword() {
-    let length = document.getElementById("length").value;                        // user lenght =10
+    let length = document.getElementById("length").value;                       
     let includeUppercase = document.getElementById("uppercase").checked;
     let includeLowercase = document.getElementById("lowercase").checked;
     let includeNumbers = document.getElementById("numbers").checked;
@@ -26,7 +26,7 @@ document.getElementById("length").addEventListener("input", updateLength);      
     let characterPool = "";                                                      
     if (includeUppercase) characterPool += uppercaseChars;                        
     if (includeLowercase) characterPool += lowercaseChars;
-    if (includeNumbers) characterPool += numberChars;                            //upcase is true then it will add 
+    if (includeNumbers) characterPool += numberChars;                           
     if (includeSymbols) characterPool += symbolChars;
 
 
@@ -37,7 +37,7 @@ document.getElementById("length").addEventListener("input", updateLength);      
     }
         //This creates an empty string to store the generated password.
     let password = "";                                         
-    for (let i = 0; i < length; i++) {                                           //Loops means it adds that many characters to the password.
+    for (let i = 0; i < length; i++) {         //Loops means it adds that many characters to the password.
         let randomIndex = Math.floor(Math.random() * characterPool.length);
         password += characterPool[randomIndex];
     }
